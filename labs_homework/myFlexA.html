@@ -51,28 +51,69 @@
         }
 
         .navbar{
-            background-color: rgb(59, 59, 59);
-            height: 100px;
-            color: white;
+            width: 100%;
+            background-color: #333;
+            padding-left: 30px;
+            padding-right: 10px;
             display: flex;
-            align-items: center;
-            
-
+            justify-content: space-between;
+            align-items: center;    
         }
 
         .logo{
-            font-size: 40px;
+            display: flex;
+            align-items: center; /*vertical control */
+            padding-left: 30px;
+            font-size: 24px;
+            color: white;
         }
 
-        .navbar ul{
+        .navbar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
             display: flex;
+            list-style: none;
+            padding-right: 20px;
+        }
+
+        @media(max-width: 600px){
+            
+        .navbar{
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: none;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center; /*vertical control */
+            font-size: 24px;
+            color: white;
+            padding: 0;
             
         }
 
-        .navbar li{
-            list-style: none;
-         
+        .navbar a {
+            text-decoration: none;
+            color: white;
         }
+        
+            .nav-links {
+                align-self: flex-start;
+                gap: 20px;
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+            }
+        }
+
 
 
     </style>
@@ -81,16 +122,19 @@
             <header>
                 <h1>FlexBox practice</h1>
             </header>
-                <nav class = "navbar">
-                    <div class = "logo">Logo</div>
-                    <ul class = "nav-links">
-                        <li><a href="myflex.html">Home</a></li>
-                        <li><a href="layout.html">About</a></li>
-                        <li><a href="about.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-
+            <!--Part B-->
+            <header>
+                <nav class="navbar">
+                    <div class="logo">Logo</div>
+                    <ul class="nav-links">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
+            </header>
+            <!-- Part A-->
             <main>
                 <section class="flex-container">
                     <div class="flex-item red">1</div>
