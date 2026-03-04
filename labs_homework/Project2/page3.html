@@ -110,8 +110,8 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pack Your Bag</h1>
-      <p>Select the supplies you wish to take on your quest. Choose wisely, as you can only carry a limited amount.</p>
+      <h1 class = "text-center">Pack Your Bag</h1>
+      <p class = "text-center">Select the supplies you wish to take on your quest. Choose wisely, as you can only carry a limited amount.</p>
       <form id="charaterForm" type="get" action="page4.html">
          
 
@@ -146,8 +146,11 @@
             <strong>Sword:</strong> Fend off those pesky foes! ⚔️
           </label>
 
-  
-
+          
+        <div>
+          <p class="text-center">Once you've chosen your gear, hit the 'Continue' button.</p>
+          <p class="text-center">But beware, every choice has consequences!</p>
+        </div>
         <div id ="button" style = "display: flex; justify-content: center;"><input type="submit" value = "Continue"></div>
       </form>
         
@@ -171,20 +174,7 @@
         // button event that changes files location to page 2
         // button event that changes files location to page 2
         const button = document.querySelector("#button");
-        
-
-
-        button.addEventListener('click', function(){
-            if( confirm("Once you've chosen your gear, hit the 'Continue' button.\nBut beware, every choice has consequences!")){
-              alert(`you have confirmed`);
-              event.preventDefault();
-              window.location.href('page4.html');
-            }else{
-              alert(`you have cancelled`);
-              event.preventDefault();
-              window.location.href('page3.html');
-            }   
-        });
+       
         
 
     </script>

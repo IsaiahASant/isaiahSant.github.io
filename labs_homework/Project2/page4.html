@@ -89,14 +89,34 @@
           padding: 10px;
         }
 
+        #clueInput{
+
+        }
+
        
       
 
     </style>
   </head>
   <body>
-    <div class="container">
-        
+    <div class="container ">
+      <form id="charaterForm" type="get" action="page5.html">
+
+
+        <h1 class="text-center"><strong>The First Obstacle</strong></h1>
+        <p class="text-center fs-5">As you venture deeper into the Dark Forest, you encounter a mystical guardian. The guardian blocks your path and poses a riddle:</p>
+        <p class="text-center fs-5">"I speak without a mouth and hear without ears. I have 
+          no b ody, but I come alive wiht wind. What am I?"
+        </p>
+
+        <label class="text-center">
+          Your Answer:
+          <input id="clueInput" type="text">
+          <input id="clueSubmit" type="submit" value = "Submit Answer">
+        </label>
+
+      </form>
+
 
           
         
@@ -119,16 +139,31 @@
 
     
     <script>
-        // button event that changes files location to page 2
-        const buttonA = document.querySelector("#button_A");
-        const headingA = document.getElementById("Heading_A");
+      event.preventDefault();
+      const submit = docuement.querySelector("#clueSubmit")
+      
+      submit.addEventListener('click', function(){
+        let input = document.getElementById("clueInput");
+        if(input === "echo"){
+           alert("right");
+        }else{
+          alert("wrong");
+        }
 
-        buttonA.addEventListener('click', function(){
+      });
+
+      
+
+      const buttonA = document.querySelector("#button_A");
+      const headingA = document.getElementById("Heading_A");
+
+      buttonA.addEventListener('click', function(){
             const name = prompt("What is your name?");
-            alert(`Once you've chosen your gear, hit the 'Continue' button`);
+            alert(`Hello ${name}, nice to see you!`);
             //set the text inside header with user's input
-            
+            headingA.textContent = 'welcome ${name}';
         });
+       
         
 
     </script>
