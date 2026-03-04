@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Character Selector</title>
+    <title>The Quest Begins</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="style.css" rel="sytlesheet">
     <style>
@@ -34,13 +34,14 @@
           width: 80%;
           height: 100%;
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
           align-items: space-between;
           flex-direction: column;
-          height: 240px;
-          padding: 10px
+          height: 280px;
           
-
+          
+          
+          
           
         }
 
@@ -87,12 +88,7 @@
           top: 10px;
           padding: 10px;
         }
-      label{
-        border: 1px solid gray;
-        border-radius: 8px;
-        padding: 1px;
-        
-      }
+
        
       
 
@@ -100,35 +96,8 @@
   </head>
   <body>
     <div class="container">
-        <!--form content-->
-        <form id="charaterForm" type="get" action="page3.html">
-            
-            <h1 class = "text-center"><strong>Choose Your Character</strong></h1>
-            <fieldset class = "float-none w-auto px-2" >
-              <legend class = "text-center">Choose Your Character</legend>
-              <!---->
-                
-                <label class="text-center">
-                  <input id="aria" type="radio">
-                  <strong>Aria, the Warrior:</strong> Strong an brave, with the ability to overcome physical obstacles.
-                </label>
-    
-                <label class="text-center">
-                  <input id="eldrin" type="radio">
-                  <strong>Eldrin, the Mage:</strong> Wise and knowledgeable with the power to solve puzzles and cast spells.
-                </label>
-                
-                <label class="text-center">
-                  <input id="tara" type="radio">
-                  <strong>Tara, the Rogue:</strong> Quick and cunning, with skills in stealth and persuasion.
-                </label>
+        
 
-                
-            </fieldset>
-
-            
-          <div id ="button" style = "display: flex; justify-content: center;"><input type="submit" value = "Continue"></div>
-        </form>
           
         
         
@@ -151,6 +120,15 @@
     
     <script>
         // button event that changes files location to page 2
+        const buttonA = document.querySelector("#button_A");
+        const headingA = document.getElementById("Heading_A");
+
+        buttonA.addEventListener('click', function(){
+            const name = prompt("What is your name?");
+            alert(`Once you've chosen your gear, hit the 'Continue' button`);
+            //set the text inside header with user's input
+            
+        });
         
 
     </script>
