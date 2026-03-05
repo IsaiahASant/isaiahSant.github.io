@@ -1,3 +1,101 @@
-body{
-    background-color: red;
-}
+.container{
+            min-width: 200px;
+            width: 80vw;
+            max-width: 550px;
+            min-height: 400px;
+            
+            border-radius: 10px;
+            border: 1px solid gray;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 2vw;
+            position: relative;
+            top: 5vw;
+            
+            
+        }
+        form{
+          
+        }
+        fieldset{
+          border: 1px solid black;
+          display: flex;
+          width: 80%;
+          height: 100%;
+          display: flex;
+          justify-content: space-around;
+          align-items: space-between;
+          flex-direction: column;
+          height: 240px;
+          padding: 10px
+          
+
+          
+        }
+
+        legend{
+          all: revert;
+          font-size: 20px;
+        }
+
+        #characterForm{
+         
+
+        }
+
+        input[type="submit"]{
+    
+          background-color: rgb(14, 119, 255);
+          color: white;
+          padding: 5px;
+          padding-left: 25px;
+          padding-right: 25px;
+          border: 1px;
+          border-radius: 5px;
+          font-size: 20px;
+        }
+     
+
+    
+
+        .inputCont{
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          gap: 20px;
+          border: 1px solid gray; 
+          border-radius: 8px;
+          margin: 2px;
+          padding: 2px;
+          
+          height: 70px;
+
+        }
+        #button{
+          position: relative;
+          top: 10px;
+          padding: 10px;
+        }
+      label{
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding: 1px;
+        margin: 5px;
+        
+      }
+
+       #clueInput{
+          
+
+        }
+
+        #clueSubmit {
+          background-color: red;
+          width: 180px;
+        }
+
+
+     
+       
