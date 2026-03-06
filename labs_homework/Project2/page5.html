@@ -30,9 +30,11 @@
         
         
         
-        <div id ="button" style = "display: flex; justify-content: center;"><input type="submit" value = "Continue on Your Journey"></div>
-
-        <p class = "text-center">Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+        <div id ="button" class style = "display: flex; justify-content: center; position:relative; top: 20px; "><input type="submit" value = "Continue on Your Journey"></div>
+        <div class ="center">
+          <p class = "text-center">Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+        </div>
+        
       </form>        
     </div>
 
@@ -41,6 +43,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script>
       const pathChoice = document.getElementById("pathChoice");
+      const form = document.getElementById("characterForm");
       const button = document.querySelector("#button input[type='submit']");
       
       button.disabled = true;
@@ -52,13 +55,14 @@
         } else{  
           button.disabled = false;
           if(value === "first"){
-            const form = document.getElementById("characterForm");
+            
             form.action = "page5b.html";
 
             document.getElementById("body").style.backgroundColor="lightgreen";
           }else{
-            form.action = "page6.html";
             document.getElementById("body").style.backgroundColor="darkred";
+            form.action = "page6.html";
+            
 
              
           }
