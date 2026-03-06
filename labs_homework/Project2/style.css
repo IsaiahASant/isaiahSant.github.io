@@ -12,25 +12,26 @@
             gap: 10px;
             padding: 2vw;
             position: relative;
-            top: 5vw;
-            
-            
+            top: 5vw;     
         }
 
         form{
+          display:flex;
+          flex-direction: column;
             
           
         }
+       
         fieldset{
           border: 1px solid black;
           display: flex;
-          width: 80%;
-          height: 100%;
+          width: 100%;
+          
           display: flex;
           justify-content: space-around;
           align-items: space-between;
           flex-direction: column;
-          height: 240px;
+          
           padding: 10px
           
 
@@ -39,13 +40,9 @@
 
         legend{
           all: revert;
-          font-size: 20px;
+          font-size: 15px;
         }
 
-        #characterForm{
-         
-
-        }
 
         input[type="submit"]{
     
@@ -58,9 +55,6 @@
           border-radius: 5px;
           font-size: 20px;
         }
-     
-
-    
 
         .inputCont{
           display: flex;
@@ -70,16 +64,10 @@
           border: 1px solid gray; 
           border-radius: 8px;
           margin: 2px;
-          padding: 2px;
-          
+          padding: 2px;      
           height: 70px;
-
         }
-        #button{
-          position: relative;
-          top: 10px;
-          padding: 10px;
-        }
+        
       label{
         border: 1px solid gray;
         border-radius: 8px;
@@ -88,10 +76,7 @@
         
       }
 
-       #clueInput{
-          
-
-        }
+     
 
         #clueSubmit {
           background-color: red;
@@ -102,11 +87,22 @@ button{
     background-color: rgb(14, 119, 255);
     color: white;
     padding: 5px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: 1px;
     border-radius: 5px;
     font-size: 20px;
+    
+}
+
+.center{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex; 
+  justify-content: 
+  center;
+
+
 }
 
 .stealth-option{

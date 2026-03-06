@@ -15,7 +15,7 @@
   <body>
     <div class="container">
         <!--form content-->
-        <form id="charaterForm" type="get" action="page3.html">
+        <form id="charaterForm" type="get" action="page3.html" onsubmit="return button()">
             
             <h1 class = "text-center"><strong>Choose Your Character</strong></h1>
             <fieldset class = "float-none w-auto px-2" >
@@ -23,39 +23,34 @@
               <!---->
                 
                 <label class="text-center">
-                  <input id="aria" type="radio">
+                  <input id="aria" type="radio" name = "class">
                   <strong>Aria, the Warrior:</strong> Strong an brave, with the ability to overcome physical obstacles.
                 </label>
     
                 <label class="text-center">
-                  <input id="eldrin" type="radio">
+                  <input id="eldrin" type="radio" name = "class">
                   <strong>Eldrin, the Mage:</strong> Wise and knowledgeable with the power to solve puzzles and cast spells.
                 </label>
                 
                 <label class="text-center">
-                  <input id="tara" type="radio">
+                  <input id="tara" type="radio" name = "class">
                   <strong>Tara, the Rogue:</strong> Quick and cunning, with skills in stealth and persuasion.
                 </label>
 
                 
             </fieldset>
+          <div class = "center">
+            <input type="submit" value="Continue" >
+          </div>
 
-            
-          <div id ="button" style = "display: flex; justify-content: center;"><input type="submit" value = "Continue"></div>
+          
+
         </form>
           
         
         
         
     </div>
-    
- 
-
-
-    
-    
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
@@ -64,7 +59,14 @@
 
     
     <script>
-        // button event that changes files location to page 2
+      function button(){
+      let selected = document.querySelector('input[name="class"]:checked');
+      if(!selected){
+        alert("Please choose a character first!");
+        return false;   // stops the form submission
+      }
+      return true;      // allows the form to submit
+    }    
         
 
     </script>
