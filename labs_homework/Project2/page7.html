@@ -3,23 +3,69 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Quest Begins</title>
+    <title>Conclusion</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <style>
     </style>
   </head>
   <body>
-    <div class="container ">
-      <form id="charaterForm" type="get" action="page7.html">
-       
-      </form>        
+    <div class="container">
+      <h1 class="text-center"><Strong>Your Quest Has Concluded</Strong></h1>
+      <h2 class="text-center"><strong>For now!</strong></h2>
+        <p class="text-center">Based on your choices, [Insert a dynamic conclusion based on the user's journey and final decision]. The kingdom will remember your deeds for generations to come.</p>
+        <p class="text-center">We hope you enjoyed your adventure. Would you like to provide feedback on your experience?</p>
+      
+        <div style = "width: 100%; display:flex; justify-content:center; align-items: flex-end; gap: 10px;">
+          your feedback:
+          <textarea name="comments" id="comments" style=" width: 60%;  ">
+            Enter your feedback here...
+          </textarea>
+        </div>
+
+        <div class = "center">
+           <input id="feedback" type="submit" value="submit feedback" >
+         </div> 
+         <div class = "center">
+           <input id="again" type="submit" value="Play Again" >
+         </div> 
+        <p class = "text-center"> 
+          The first person that comes to mind finishing this project is Gabe Zullo. For those who do not know
+          who that is, he was an acquaintance I knew from high school. He inpsired me a lot to do computer science
+          and hed had huge dreams for becoming a Game Dev. In senior year of highschool, we both 
+          participated in the Siena coding competition representing guilderland high school. I had a lot of fun with him
+          and I cherish the very few memory that I had with him. But unfortunately, In Senior year of HS, he passed away from 
+          cancer before graduating. The one regret I had was not spending more time then I should've with him, I felt I could've
+          knew him a bit better. But now, everytime I complete any coding program, or work on any game dev, I would always think of him. 
+          I remember how excited he was to attend AP CompSci class and how he helped everyone out if they had any questions.
+          I hope one day I can make a game to honor his memory and thank him for the influence he had on me. He will always live on in my memory
+          and thank him everyday for introducing me to game dev and computer science.
+      
+
+        </p>
+
+
+      
     </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script>
+      const feedback = document.getElementById("feedback");
+      const again = document.getElementById("again");
+
+      feedback.addEventListener('click', function(){
+        location.href = "page7.html";
+      })
+
+      again.addEventListener('click', function(){
+        location.href = "welcome.html";
+      })
+
+
       
 
 
