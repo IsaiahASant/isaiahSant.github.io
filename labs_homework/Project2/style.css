@@ -76,12 +76,7 @@
         
       }
 
-     
-
-        #clueSubmit {
-          background-color: red;
-          width: 180px;
-        }
+#clueSubmit {  background-color: red;  width: 180px;}
 
 button{
     background-color: rgb(14, 119, 255);
@@ -114,5 +109,3 @@ button{
     height: 40px;
     margin: 3px;
 }
-     
-       

@@ -41,21 +41,24 @@
     </p>
 
     <div class = "mb-5">
-      <label for="guessField" class = "form-label">Enter a guess: </label>
-      <input
-        type="number"
-        min="1"
-        max="100"
-        required
-        id="guessField"
-        class="form-control guessField" />
-      <input type="submit" value="Submit guess" class="guessSubmit btn btn-primaru guessSubmit" />
+      <label for="guessField" class="form-label">Enter a guess: </label>
+      <div class="input-group">
+        <input
+          type="number"
+          min="1"
+          max="100"
+          required
+          id="guessField"
+          class="form-control guessField" />
+         <button class="btn btn-primary guessSubmit" type="button"> Submit guess </button>
+      </div>
+
     </div>
 
-    <div class="resultParas">
+    <div class="resultParas fw-bold">
       <p class="guesses"></p>
       <p class="lastResult"></p>
-      <p class="lowOrHi"></p>
+      <p class="lowOrHi text-warning fw-semibold"></p>
     </div>
 
     <script>
@@ -76,6 +79,7 @@
 
         function checkGuess(){
             const userGuess = Number(guessField.value);
+            console.log(userGuess);
             if(guessCount === 1){
                 guesses.textContent = "Previous guesses:";
             }
@@ -83,20 +87,23 @@
 
             if(userGuess === randomNumber){
                 lastResult.textContent = "Congratulations! You got it right!";
-                lastResult.style.backgroundColor = "green";
+                lastResult.className = 'lastResult alert alert-success';
+                //lastResult.style.backgroundColor = "green";
                 lowOrHi.textContent = "";
                 setGameOver();
             } else if (guessCount === 10){
                 lastResult.textContent = "!!!Game Over!!!";
                 lowOrHi.textContent = "";
+                lastResult.className = 'lastResult alert alert-danger';
                 setGameOver();
             } else{
                 lastResult.textContent = "Wrong!";
-                lastResult.style.backgroundColor = "red";
+                //lastResult.style.backgroundColor = "red";
+                lastResult.className = 'lastResult alert alert-danger';
                 if(userGuess < randomNumber){
                     lowOrHi.textContent = "Last guess was to low!";
                 } else if (userGuess > randomNumber){
-                    lowOrHi.textContent = "last Guess wa too high!";   
+                    lowOrHi.textContent = "last Guess was too high!";   
                 }
             }
             guessCount++;
@@ -111,8 +118,10 @@
         function setGameOver(){
             guessField.disabled = true;
             guessSubmit.disabled = true;
-            resetButton = document.createElement("button");
-            resetButton.textContent = "Start new game";
+            resetButton = document.createElement('button');
+            resetButton.textContent = 'Start new game';
+            resetButton.className = 'btn btn-success mt-3';
+
             document.body.append(resetButton);
             resetButton.addEventListener("click", resetGame);
 
@@ -134,7 +143,8 @@
             guessField.value = "";
             guessField.focus();
 
-            lastResult.style.backgroundColor = "white";
+            //lastResult.style.backgroundColor = "white";
+            lastResult.className = 'lastResult';
 
             randomNumber = Math.floor(Math.random()*100) + 1;
         }
