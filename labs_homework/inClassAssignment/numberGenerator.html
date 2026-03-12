@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Starting Scaffold for 
+ https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/22_Day_Manipulating_DOM_object/22_day_manipulating_DOM_object.md#exercises-level-1
+ -->
+<head>
+    <meta charset="UTF-8">
+    <title>Number Generator</title>
+    <style>
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 600px;
+            gap: 4px;
+        }
+
+        .wrapper div {
+            width: 80px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Number Generator</h1>
+        <div class="wrapper">
+
+        </div>
+    </main>
+
+
+    <script>
+        // Your code here
+        // Hint: grab .wrapper, loop 0-100, createElement, set background, append
+
+        let box;
+        let parentTag = document.querySelector('.wrapper');
+        for(let i = 1; i <= 100; i ++){
+            box = document.createElement('div');
+            box.className = 'box';
+            box.style.fontSize = '24px';
+            box.textContent = i;
+            parentTag.body.appendChild(box)
+
+        }
+    </script>
+</body>
+
+</html>
