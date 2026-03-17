@@ -4,29 +4,61 @@
 <head>
     <title>Document Object Model:30 Days Of JavaScript</title>
 </head>
-    <main id="main">
+    <main id="main" style="display:flex; justify-content: space-between; align-items: space-between; flex-wrap:wrap; width: 630px; height: 1100px;">
 
 
     </main>
 <body>
 
     <script>
+        //const body = createElement('div');
+        
+        const main = document.getElementById("main");
         // 
         let num;
-        for(let i = 1; i <= 100; i ++){
+        for(let i = 0; i <= 101; i ++){
+
             num = document.createElement('div');
-            //checks if element value is a prime number
-            if(i%1 == number && i%i == 1){
-                num.className = 'redBox'
-            }
+            num.textContent = i;
+            
+            num.style.width = "100px";
+            num.style.height = "60px";
+            num.style.display = "flex";
+            num.style.justifyContent = "center";
+            num.style.alignItems = "center";
+            num.style.fontSize = "2em"
+            num.style.fontWeight = "bold";
+            num.style.color = "white";
+
             //checks if even
-            if(i%2==0){
+            if(i % 2 === 0){
                 num.className = 'greenBox';
+                num.style.backgroundColor = "rgb(153, 237, 149)";
             }else{ //checks if number is odd
                 num.className = 'yellowBox';
+                num.style.backgroundColor = "yellow";
+            }
+
+            //checks if element value is a prime number
+            if(isPrime(i)){
+                num.className = 'redBox'
+                num.style.backgroundColor = "red";
             }
             
-            
+           
+            console.log(num,i);
+
+
+            main.appendChild(num);           
+
+        }
+
+        function isPrime(n){
+            if (n < 2) return false;
+            for (let i = 2; i < n; i++) {
+                if (n % i === 0) return false;
+            }
+            return true;
 
 
         }
