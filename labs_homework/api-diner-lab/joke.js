@@ -1,8 +1,8 @@
 "use strict";
 
 function init() {
-  let btn = document.getElementById("meal-btn");
-  btn.addEventListener("click", fetchMeal);
+  let btn = document.getElementById("joke-btn");
+  btn.addEventListener("click", fetchJoke);
 }
 
 function fetchDog() {
@@ -76,4 +76,52 @@ function showMeals(data){
       }
   }
 }
+
+ function fetchJoke(){
+    const url = "https://official-joke-api.appspot.com/random_joke";
+    fetch(url)
+    .then(statusCheck) // Assuming your existing statusCheck helper
+    .then(resp => resp.json())
+    .then(data => {
+      const output = document.getElementById("joke-output");
+      output.innerHTML = "";
+
+
+
+
+      let setup = document.createElement("p");
+        setup.textContent = data.setup;
+
+
+    let punchline = document.createElement("p");
+    punchline.textContent = data.punchline;
+    punchline.style.filter = "blur(8px)";
+    punchline.style.opacity = "0";
+    punchline.style.transition = "all 0.7s ease-in-out";
+
+
+
+
+    let revealBtn = document.createElement("button");
+    revealBtn.textContent = "Show Punchline";
+   
+    output.appendChild(setup);
+        output.appendChild(punchline);
+        output.appendChild(revealBtn);
+
+
+    const reveal = function() {
+        punchline.style.filter = "blur(0)";
+        punchline.style.opacity = "1";
+        revealBtn.disabled = true;
+        revealBtn.textContent = "hahaha";
+    };
+    revealBtn.onclick = reveal;
+
+
+    setTimeout(reveal, 3000);
+})
+    .catch(handleError);
+}
+
 
